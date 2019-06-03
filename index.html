@@ -5,48 +5,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Semaforo</title>
-<style>
-    .caja-semaforo{
-
-        background-color: rgb(50,50,50);
-        width: 80px;
-        border-radius: 50px;
-        border: 2px solid black;
-        margin: 0 auto;
-        padding: 10px;
-
-    }
-    .luz-semaforo{
-        background-color:gray;
-        width: 50px;
-        height: 50px;
-        border-radius: 50%;
-        border: 2px solid black;
-        margin: 0 auto;
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
-</style>
-
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
+
 <body>
     <div class="caja-semaforo">
         <div class="luz-semaforo" id="red"></div>
         <div class="luz-semaforo" id="yellow"></div>
         <div class="luz-semaforo" id="green"></div>
     </div>
+    
+    <div class="centrar">
+    <button  onclick="onclickBotonCambiar()" id="botonCambiar">Cambiar</button>
+    </div>
 
+    <div class="centrar">
+        <button id="botonAuto" onclick="onclickBotonAuto()">Modo automatico</button>
+        </div>
 
-<script>
-    function cambiarColorLuzSemaforo(id,prender){
-        var color='gray';
-        if(prender==true) color=id;
-        document.getElementById(id).style.backgroundColor = color;
-    }
-cambiarColorLuzSemaforo('red',true);
-cambiarColorLuzSemaforo('yellow',!true);
-cambiarColorLuzSemaforo('green',!true);
-</script>
+<script src="js/main.js"></script>
 </body>
 </html>
